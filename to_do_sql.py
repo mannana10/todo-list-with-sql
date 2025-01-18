@@ -137,16 +137,16 @@ def menu():
 
         elif choice == "შ":
             manager.showAll()
-            if manager.todo_checker(database): 
-                todo_id = manager.todo_checker(database) 
+            todo_id = manager.todo_checker(database)  
+            if todo_id: 
                 new_text = input("შეიტანეთ შესასრულებელი სამუშაოს ახალი დასახელება: ").strip()
                 new_deadline = input("შეიტანეთ ახალი შესასრულებელი სამუშაოს ბოლო ვადა: ").strip()
                 manager.replace_todo(todo_id, new_text, new_deadline)
 
         elif choice == "წ":
             manager.showAll()
-            if manager.todo_checker(database): 
-                todo_id = manager.todo_checker(database)  
+            todo_id = manager.todo_checker(database)  
+            if todo_id: 
                 manager.delete_todo(todo_id)
 
         elif choice == "გ":
